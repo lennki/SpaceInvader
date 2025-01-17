@@ -83,7 +83,7 @@ namespace SpaceInvader
                 spawnTimer.Stop();
                 spielVorbei = true;
 
-                var neustart = MessageBox.Show("Neustarten? \n Dein Score: " + score);
+                var neustart = MessageBox.Show("Beenden \n Dein Score: " + score);
 
                 if (neustart == MessageBoxResult.OK)
                 {
