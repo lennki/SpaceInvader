@@ -1,0 +1,30 @@
+﻿<Window x:Class="SpaceInvader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpaceInvader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="500">
+
+    <Window.InputBindings>
+        <KeyBinding Key="Left" Command="{Binding BewegeLinksCommand}"/>
+        <KeyBinding Key="Right" Command="{Binding BewegeRechtsCommand}"/>
+        <KeyBinding Key="Up" Command="{Binding BewegeObenCommand}"/>
+        <KeyBinding Key="Down" Command="{Binding BewegeUntenCommand}"/>
+        <KeyBinding Key="Space" Command="{Binding SchiessenCommand}"/>
+
+    </Window.InputBindings>
+
+    <Grid>
+        <Canvas x:Name="canvas" Background="Black" Height="600" Width="400">
+            <Image x:Name="spielfigur" Height="70" Width="55" Canvas.Left="20" Canvas.Top="550" Source="images/spieler.png" />
+            <Label Name="leben" Content="Leben: 100" FontSize="18" FontWeight="Bold" Foreground="Green"/>
+            <Label Name="Score" Content="Score: 0" FontSize="18" FontWeight="Bold" Foreground="Green" RenderTransformOrigin="0.537,2.048" HorizontalAlignment="Center" Canvas.Top="17" VerticalAlignment="Top"/>
+            <Button x:Name="startKnopf" Content="Start" FontSize="18" FontWeight="Bold" Canvas.Left="177" Canvas.Top="286" Click="start_Click" RenderTransformOrigin="2.459,7.747" Visibility="Visible" />
+            <Label Name="text1" Content="Bewegen mit den Pfeiltaste " FontSize="18" FontWeight="Bold" Foreground="Green" RenderTransformOrigin="0.413,9.864" Canvas.Top="319" Height="37" Width="240" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="80"/>
+            <Label Name="text2" Content="Schießen mit der Leertaste" FontSize="18" FontWeight="Bold" Foreground="Green" RenderTransformOrigin="0.413,9.864" Canvas.Top="356" Height="37" Width="240" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="80"/>
+        </Canvas>
+
+    </Grid>
+</Window>
